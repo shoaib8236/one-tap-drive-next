@@ -1,0 +1,116 @@
+@import "../../app/variable.module.scss";
+
+.layout {
+  padding: 10px 0;
+  background-color: $secondary;
+  padding-top: $space_lg;
+
+  .top_content {
+    .logo {
+      width: 180px;
+      position: relative;
+    }
+  }
+  .links_container {
+    ul {
+      display: flex;
+      padding-left: 0;
+      margin: 0;
+      margin-top: $space_md;
+
+      > li {
+        padding: 0 $space_md;
+        background-color: $secondary_2;
+      }
+
+      li {
+        list-style: none;
+        position: relative;
+        a {
+          color: $secondary_3;
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+
+        .dropdown,
+        .sub_dropdown {
+          overflow: visible;
+          margin-top: 0;
+        }
+
+        .dropdown {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $secondary;
+          padding: $space_sm;
+          display: none;
+          transition: $transitions_fast $transition_animation_primary;
+          min-width: 300px;
+          flex-direction: column;
+          z-index: 1;
+          transform: translateY(100%);
+          overflow: visible;
+          animation: dropdown $transitions_extra_fast
+            $transition_animation_primary both;
+
+          li {
+            position: relative;
+            padding: $space_sm 0;
+            border-bottom: solid 1px $secondary_2;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            .sub_dropdown {
+              position: absolute;
+              top: 32px;
+              right: -6px;
+              z-index: 2;
+              background-color: $secondary;
+              padding: $space_sm;
+              display: none;
+              transition: $transitions_extra_fast $transition_animation_primary;
+              min-width: 300px;
+              transform: translateX(100%);
+
+              animation: sub_dropdown $transitions_fast
+                $transition_animation_primary both;
+              flex-direction: column;
+            }
+            &:hover {
+              .sub_dropdown {
+                display: block;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes dropdown {
+  from {
+    transform: translateY(100%) scale(0.5);
+  }
+  to {
+    transform: translateY(100%) scale(1);
+  }
+}
+
+@keyframes sub_dropdown {
+  from {
+    transform: translateX(100%) scale(0.5);
+  }
+  to {
+    transform: translateX(100%) scale(1);
+  }
+}

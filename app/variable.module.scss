@@ -1,0 +1,51 @@
+// colors
+$primary: #ffba00;
+$secondary: #1a1a1a;
+$secondary_2:#333333;
+$secondary_3:#999999;
+
+// spacing
+
+$space_unit: 1em;
+$space_xxs: 0.25 * $space_unit;
+$space_xs: 0.5 * $space_unit;
+$space_sm: 0.75 * $space_unit;
+$space_md: 1.25 * $space_unit;
+$space_lg: 2 * $space_unit;
+$space_xl: 3.25 * $space_unit;
+$space_xxl: 5.25 * $space_unit;
+
+// font sizes
+
+$p_font_size_xs: 12px;
+$p_font_size_sm: 14px;
+$p_font_size_md: 16px;
+$p_font_size_lg: 18px;
+
+$h_font_size_xs: 18px;
+$h_font_size_sm: 24px;
+$h_font_size_md: 30px;
+$h_font_size_lg: 36px;
+
+//breakpoints
+
+$breakpoint_sm: 576px;
+$breakpoint_md: 768px;
+
+
+// font weights
+
+$font_light: 300;
+$font_normal: 400;
+$font_medium: 500;
+$font_semibold: 600;
+$font_bold: 700;
+$font_extra_bold: 800;
+
+
+// transitions
+
+$transitions_extra_fast: .2s;
+$transitions_fast: .2s;
+
+$transition_animation_primary: cubic-bezier(0.67, 1.68, 1, 1);

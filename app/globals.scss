@@ -1,0 +1,41 @@
+@import "./variable.module.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: $p_font_size_md; // Default font size
+
+  @media screen and (max_width: $breakpoint_md) {
+    font-size: $p_font_size_sm;
+  }
+
+  @media screen and (max_width: $breakpoint_sm) {
+    font-size: $p_font_size_xs;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-size: $h_font_size_lg; // Default font size
+
+  @media screen and (max_width: $breakpoint_md) {
+    font-size: $h_font_size_md;
+  }
+
+  @media screen and (max_width: $breakpoint_sm) {
+    font-size: $h_font_size_sm;
+  }
+}
+
+
+
+.content_wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
