@@ -1,0 +1,23 @@
+@import "../../app/variable.module.scss";
+
+.theme_btn {
+  background-color: $secondary;
+  color: $light;
+  padding: $space_sm $space_lg;
+  border: none;
+  outline: none;
+  display: block;
+
+  &:hover {
+    color: $primary;
+  }
+  &:focus {
+    outline: none;
+    color: $primary;
+  }
+
+  &.light_primary {
+    background-color: transparent;
+    color: $primary;
+  }
+}

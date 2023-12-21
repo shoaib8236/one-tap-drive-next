@@ -1,0 +1,17 @@
+@import "../../app/variable.module.scss";
+
+.heading_wrap {
+    text-align: center;
+    margin: $space_xxl;
+    h2 {
+      margin-bottom: $space_sm;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $secondary_2;
+    }
+    p {
+      margin: 0;
+      max-width: 820px;
+      margin: auto;
+    }
+  }

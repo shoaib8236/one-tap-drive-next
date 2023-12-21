@@ -1,0 +1,26 @@
+@import "../../app/variable.module.scss";
+
+.wrapper {
+  padding: $space_lg;
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+    transition: $transitions_fast;
+
+  .image {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    margin-bottom: $space_sm;
+  }
+  p {
+    font-size: $p_font_size_md;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    font-weight: $font_semibold;
+  }
+
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.2);
+    transform: scale(1.05);
+  }
+}

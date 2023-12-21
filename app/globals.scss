@@ -5,7 +5,13 @@ body {
   padding: 0;
 }
 
-p {
+button {
+  cursor: pointer;
+}
+
+p,
+button,
+a {
   font-size: $p_font_size_md; // Default font size
 
   @media screen and (max_width: $breakpoint_md) {
@@ -31,11 +37,21 @@ h3 {
   }
 }
 
-
-
 .content_wrap {
   width: 100%;
   max-width: 1200px;
   margin: auto;
 }
 
+.swiper {
+  padding: 0px 0 40px 0;
+
+  .swiper-pagination-bullet {
+    transition: $transitions_fast;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+    transform: scale(1.8);
+  }
+}

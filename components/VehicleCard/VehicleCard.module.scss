@@ -1,0 +1,108 @@
+@import "../../app/variable.module.scss";
+.card {
+  width: 100%;
+  position: relative;
+  transition: $transitions_fast;
+  cursor: pointer;
+
+  .rental_logo_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: $space_xs;
+    background-color: rgba($color: $secondary, $alpha: 0.7);
+    z-index: 1;
+  }
+  .rental_logo {
+    position: relative;
+    height: 30px;
+    width: 60px;
+  }
+
+  .card_image {
+    height: 200px;
+    position: relative;
+  }
+  .car_content {
+    padding: $space_sm;
+    border: solid 1px $stroke_color;
+    padding-top: 0;
+    h2 {
+      font-size: $h_font_size_xs;
+      text-transform: uppercase;
+    }
+
+    .pricing {
+      display: flex;
+      align-items: center;
+      gap: $space_lg;
+
+      .pricing_item {
+        p {
+          font-size: $p_font_size_sm;
+          margin: $space_xxs 0;
+          font-weight: $font_semibold;
+          color: $secondary;
+
+          &:last-child {
+            font-size: $p_font_size_xs;
+          }
+
+          sub {
+            position: relative;
+            top: -2px;
+          }
+        }
+      }
+    }
+
+    ul {
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        margin-bottom: $space_xxs;
+        font-size: $p_font_size_sm;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: $space_xs;
+          color: $primary;
+        }
+      }
+    }
+
+    .vehicle_stats {
+      display: flex;
+      gap: $space_xs;
+      > div {
+        border: solid 1px $stroke_color;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          color: $secondary_3;
+          font-size: $h_font_size_xs;
+        }
+        span {
+          color: $secondary_3;
+          font-size: $p_font_size_lg;
+          margin-left: $space_xxs;
+        }
+        &.type {
+          border: none;
+          span {
+            font-size: $p_font_size_md;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $shadow_primary;
+  }
+}

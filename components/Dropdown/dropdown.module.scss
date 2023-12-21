@@ -1,0 +1,71 @@
+@import "../../app/variable.module.scss";
+.wrapper {
+  position: relative;
+
+  .action {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    transition: $transitions_fast;
+    border: none;
+    width: 100%;
+
+    svg {
+      margin-left: auto;
+      transition: $transitions_fast;
+      font-size: 20px;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+
+      &.normal {
+        transform: rotate(0deg);
+      }
+    }
+
+    &.dark {
+      color: $dark;
+    }
+  }
+  .content {
+    background-color: $secondary;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    left: 0;
+    width: max-content;
+    animation: scale-in $transitions_fast both;
+
+    &.exit_animation {
+      animation: scale-out $transitions_fast both;
+    }
+
+    &.position_right {
+      left: calc(100%);
+      top: 10px;
+    }
+  }
+
+  @keyframes scale-in {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-out {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
+}
