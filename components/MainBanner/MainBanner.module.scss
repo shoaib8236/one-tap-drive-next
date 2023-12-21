@@ -16,6 +16,7 @@
   .content {
     width: 100%;
     max-width: 1024px;
+    padding: 0 $space_lg;
     h1 {
       font-size: 5vw;
       line-height: 1;
@@ -71,9 +72,11 @@
 }
 .services {
   display: flex;
+  flex-wrap: wrap;
   .item {
     padding: $space_xxl $space_xl;
     background-color: $secondary_2;
+    min-width: 200px;
     flex: 1;
     transition: $transitions_fast;
     h2,
@@ -99,5 +102,34 @@
 
   button {
     margin: auto;
+  }
+}
+
+@media screen and (max-width: $breakpoint_md) {
+  .wrapper {
+    height: 40svh;
+    .content {
+      padding: $space_sm;
+
+      h1 {
+        font-size: $h_font_size_md;
+        margin-bottom: $space_sm
+      }
+      .search {
+
+        input {
+          height: 50px;
+        }
+        button {
+          height: 50px;
+          padding: $space_sm;
+        }
+      }
+    }
+  }
+  .services {
+    .item {
+      padding: $space_sm;
+    }
   }
 }

@@ -95,3 +95,22 @@
     transform: translateX(100%) scale(1);
   }
 }
+
+
+@media screen and (max-width:$breakpoint_md) {
+  
+.layout {
+ 
+
+  .logo {
+    
+  }
+
+  .links_container {
+   
+    .links {
+      display: none;
+    }
+  }
+}
+}
