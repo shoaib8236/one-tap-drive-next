@@ -19,8 +19,8 @@ const MainBanner = (props) => {
           </h1>
           <Fade>
             <p>
-              Explore our wide range of rental cars in Dubai and experience the
-              luxury and convenience.
+            Book directly from local suppliers. No commission, no mark-ups.
+
             </p>
           </Fade>
           <div className={cl.search}>

@@ -7,7 +7,6 @@
     gap: $space_sm;
     .grid_item {
       gap: $space_sm;
-
     }
   }
 
@@ -17,6 +16,22 @@
     justify-content: flex-end;
   }
 
+  @media screen and (max-width: $breakpoint_lg) {
+    .grid_wrap {
+      grid-template-columns: repeat(3, 1fr);
+
+      .grid_item {
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint_md) {
+    .grid_wrap {
+      grid-template-columns: repeat(2, 1fr);
+
+      .grid_item {
+      }
+    }
+  }
   @media screen and (max-width: $breakpoint_sm) {
     .grid_wrap {
       grid-template-columns: repeat(1, 1fr);
